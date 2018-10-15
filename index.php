@@ -1,10 +1,10 @@
 <?php
 	// addmin - t@t.com hello1234
-	include_once 'obj/company.php';
+	include_once 'obj/groupchat.php';
 
-	$admin=new Company();
+	$admin=new GroupChat();
 	
 
-	$admin->deleteCompany(1);
+	$admin->deleteGroupChat(3);
 
    ?>
