@@ -7,3 +7,5 @@ runtime_config:
 handlers:
 - url: /.*
   script: index.php
+  
+ cloudsql_port: 3306
