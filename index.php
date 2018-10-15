@@ -1,10 +1,10 @@
 <?php
 
-	include_once 'obj/chatbot.php';
+	include_once 'obj/company.php';
 
-	$chatbot=new ChatBot();
+	$company=new Company();
 	
 
-	$chatbot->addChatbot
+	$company->addCompany("ABC Company","info@abc.com",1,"red","Lorem ipsum sit dolor amet");
 
    ?>

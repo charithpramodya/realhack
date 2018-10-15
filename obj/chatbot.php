@@ -12,7 +12,7 @@ class ChatBot{
 
 
 	function addChatBot($companyId,$chatbotData){
-		$sql="INSERT INTO chatbots(company_id,chatbot_data) VALUES('$email','$password')";
+		$sql="INSERT INTO chatbots(company_id,chatbot_data) VALUES('$companyId','$chatbotData')";
 		$this->conn->query($sql);
 
 	}
