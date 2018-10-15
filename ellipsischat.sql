@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 15, 2018 at 06:50 PM
+-- Generation Time: Oct 16, 2018 at 12:24 AM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 7.0.13
 
@@ -34,6 +34,14 @@ CREATE TABLE `administrators` (
   `password` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `administrators`
+--
+
+INSERT INTO `administrators` (`id`, `email`, `password`) VALUES
+(1, 'adb@gmail', '12345'),
+(2, 't@t.com', '81dc9bdb52d04dc20036dbd8313ed055');
+
 -- --------------------------------------------------------
 
 --
@@ -45,6 +53,14 @@ CREATE TABLE `chatbots` (
   `company_id` int(11) NOT NULL,
   `chatbot_data` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `chatbots`
+--
+
+INSERT INTO `chatbots` (`chatbot_id`, `company_id`, `chatbot_data`) VALUES
+(2, 0, 'abcd'),
+(3, 1, 'gdhghdk');
 
 -- --------------------------------------------------------
 
@@ -61,6 +77,14 @@ CREATE TABLE `companies` (
   `company_description` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `companies`
+--
+
+INSERT INTO `companies` (`company_id`, `company_name`, `company_email`, `admin_created`, `company_color`, `company_description`) VALUES
+(2, 'ABC Company', 'info@abc.com', 1, '#ffffff', 'Lorem ipsum sit dolor amet'),
+(3, 'PQR Company', 'info@pqr.com', 1, '#000000', 'Lorem ipsum sit dolor amet hitan');
+
 -- --------------------------------------------------------
 
 --
@@ -75,6 +99,14 @@ CREATE TABLE `groupchats` (
   `members` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `groupchats`
+--
+
+INSERT INTO `groupchats` (`groupchat_id`, `company_id`, `chatname`, `member_count`, `members`) VALUES
+(1, 2, 'Jpura BICT', 4, '[A]'),
+(2, 2, 'Jpura BICT', 4, '[A]');
+
 -- --------------------------------------------------------
 
 --
@@ -88,6 +120,13 @@ CREATE TABLE `members` (
   `company_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `members`
+--
+
+INSERT INTO `members` (`member_id`, `name`, `email`, `company_id`) VALUES
+(2, 'john', 'email@email.com', 4);
+
 -- --------------------------------------------------------
 
 --
@@ -99,8 +138,16 @@ CREATE TABLE `messages` (
   `groupchat_id` int(11) NOT NULL,
   `message` text NOT NULL,
   `member_id` int(11) NOT NULL,
-  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `timestamp` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `messages`
+--
+
+INSERT INTO `messages` (`msg_id`, `groupchat_id`, `message`, `member_id`, `timestamp`) VALUES
+(2, 1, 'lorem ipsum', 2, '0000-00-00 00:00:00'),
+(3, 1, 'lorem ipsum', 2, '1539633834');
 
 --
 -- Indexes for dumped tables
@@ -150,22 +197,32 @@ ALTER TABLE `messages`
 -- AUTO_INCREMENT for table `administrators`
 --
 ALTER TABLE `administrators`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `chatbots`
 --
 ALTER TABLE `chatbots`
-  MODIFY `chatbot_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `chatbot_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `companies`
 --
 ALTER TABLE `companies`
-  MODIFY `company_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `company_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT for table `groupchats`
+--
+ALTER TABLE `groupchats`
+  MODIFY `groupchat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT for table `members`
+--
+ALTER TABLE `members`
+  MODIFY `member_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `msg_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `msg_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
