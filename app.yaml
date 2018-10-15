@@ -8,5 +8,9 @@ handlers:
 - url: /.*
   script: index.php
   
- cloudsql_connection_name: realhackfi:asia-south1:realhackfinal
- cloudsql_port: 3306
+ env_variables:
+  # Replace USER, PASSWORD, DATABASE, and CONNECTION_NAME with the
+  # values obtained when configuring your Cloud SQL instance.
+  MYSQL_DSN: mysql:unix_socket=/cloudsql/realhackfi:asia-south1:realhackfinal;dbname=ellipsischat
+  MYSQL_USER: root
+  MYSQL_PASSWORD: 
