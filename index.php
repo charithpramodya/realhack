@@ -5,6 +5,6 @@
 	$admin=new Messages();
 	
 
-	print_r($admin->showMessages(1));
+	print_r($admin->calculateMessageTime(1539640313));
 
    ?>

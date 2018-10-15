@@ -28,6 +28,18 @@ class Messages{
 		$this->conn->query($sql);
 	}
 
+	function calculateMessageTime($timestamp){ // Calculates and Shows Message Time
+		if (time() -$timestamp < 1 * 60 * 1000){
+			return "Just Now";
+		}else if (time() - $timestamp >= 1*60*1000 AND $timestamp - time() <= 2*60*1000 ){
+			return "1 Minute ago";
+		}else if (time() - $timestamp >= 2*60*1000 AND $timestamp - time() <= 3*60*1000){
+			return "2 Minutes ago";
+		}
+		
+
+	}
+
 
 
 
