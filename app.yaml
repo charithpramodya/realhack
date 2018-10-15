@@ -7,6 +7,8 @@ runtime_config:
 handlers:
 - url: /.*
   script: index.php
+- url: /check.*
+  script: check.php
   
  env_variables:
   # Replace USER, PASSWORD, DATABASE, and CONNECTION_NAME with the
