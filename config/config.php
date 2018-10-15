@@ -6,7 +6,7 @@ class DB{
 	var $servername = "realhackfi:asia-south1:realhackfinal";
 	var $username = "root";
 	var $password = "";
-	var $db='ellipsischat';
+	var $db="ellipsischat";
 	var $conn;
 	
 	function __construct(){
