@@ -1,10 +1,10 @@
 <?php
 	// addmin - t@t.com hello1234
-	include_once 'obj/members.php';
+	include_once 'obj/messages.php';
 
-	$admin=new Members();
+	$admin=new Messages();
 	
 
-	$admin->removeMember(1);
+	$admin->deleteMessage(1);
 
    ?>

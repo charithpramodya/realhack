@@ -11,10 +11,15 @@ class Messages{
 		$this->conn=$db->getconnection();
 	}
 
-	function addAdmin($groupchat_id,$message,$member_id){
-		$sql="INSERT INTO messages(groupchat_id,message,member_id) VALUES($groupchat_id,'$message',$member_id)";
+	function addMessage($groupchat_id,$message,$member_id){
+		$timestamp = time();
+		$sql="INSERT INTO messages(groupchat_id,message,member_id,timestamp) VALUES($groupchat_id,'$message','$member_id', '$timestamp')";
 		$this->conn->query($sql);
+	}
 
+	function deleteMessage($msg_id){
+		$sql = "DELETE FROM messages WHERE msg_id=$msg_id";
+		$this->conn->query($sql);
 	}
 
 
