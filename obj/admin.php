@@ -14,7 +14,16 @@ class Admin{
 	function addAdmin($email,$password){
 		$sql="INSERT INTO administrators(email,password) VALUES('$email','$password')";
 		$this->conn->query($sql);
+	}
 
+	function updateAdmin($email, $password){
+		$sql = "UPDATE administrators SET password = $password WHERE email = $email";
+		$this->conn->query($sql);
+	}
+
+	function removeAdmin($email){
+		$sql = "DELETE FROM administrators WHERE email=$email";
+		$this->conn->query($sql);
 	}
 
 

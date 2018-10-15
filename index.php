@@ -1,10 +1,10 @@
 <?php
 
-	include_once 'obj/admin.php';
+	include_once 'obj/chatbot.php';
 
-	$admin=new Admin();
+	$chatbot=new ChatBot();
 	
 
-	$admin->addAdmin('adb@gmail','12345');
+	$chatbot->addChatbot
 
    ?>
