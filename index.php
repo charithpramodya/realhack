@@ -1,10 +1,10 @@
 <?php
 	// addmin - t@t.com hello1234
-	include_once 'obj/groupchat.php';
+	include_once 'obj/members.php';
 
-	$admin=new GroupChat();
+	$admin=new Members();
 	
 
-	print_r($admin->showGroupChatsByCompanyId(2));
+	print_r($admin->showMembersByCompanyId(4));
 
    ?>

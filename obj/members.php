@@ -16,6 +16,12 @@ class  Members{
 		$this->conn->query($sql);
 	}
 
+	function showMembersByCompanyId($company_id){
+		$sql = "SELECT * FROM members WHERE company_id=$company_id";
+		$result = $this->conn->query($sql);
+		return mysqli_fetch_all($result, MYSQLI_ASSOC);	
+	}
+
 	function updateMember($member_id, $name, $email, $company_id){
 		$sql = "UPDATE members SET name='$name', email='$email', company_id='$company_id' WHERE member_id='$member_id'";
 		$this->conn->query($sql);
