@@ -1,10 +1,11 @@
 <?php
 	// addmin - t@t.com hello1234
-	include_once 'obj/messages.php';
+	include_once 'obj/chatbot.php';
 
-	$admin=new Messages();
+	$admin=new ChatBot();
 	
 
-	$admin->deleteMessage(1);
+	$x = $admin->showChatBotByCompanyId(1);
+	print_r($x);
 
    ?>
