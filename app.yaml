@@ -9,10 +9,3 @@ handlers:
   script: index.php
 - url: /(.+\.php)$
   script: \1
-  
- env_variables:
-  # Replace USER, PASSWORD, DATABASE, and CONNECTION_NAME with the
-  # values obtained when configuring your Cloud SQL instance.
-  MYSQL_DSN: mysql:unix_socket=/cloudsql/realhackfi:asia-south1:realhackfinal;dbname=ellipsischat
-  MYSQL_USER: root
-  MYSQL_PASSWORD: 
