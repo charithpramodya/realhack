@@ -1,10 +1,10 @@
 <?php
 
-	include_once 'obj/company.php';
+	include_once 'obj/admin.php';
 
-	$company=new Company();
+	$admin=new Admin();
 	
 
-	$company->addCompany("ABC Company","info@abc.com",1,"red","Lorem ipsum sit dolor amet");
+	$admin->addAdmin("t@t.com", "hello123");
 
    ?>

@@ -12,6 +12,7 @@ class Admin{
 	}
 
 	function addAdmin($email,$password){
+		$password = md5($password);
 		$sql="INSERT INTO administrators(email,password) VALUES('$email','$password')";
 		$this->conn->query($sql);
 	}
