@@ -1,9 +1,10 @@
 <?php
 
-	include_once 'config/config.php';
+	include_once 'obj/admin.php';
 
-	$db=new DB();
-	$con=$db->getconnection();
+	$admin=new Admin();
+	
 
+	$admin->addAdmin('adb@gmail','12345');
 
    ?>
