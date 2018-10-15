@@ -3,7 +3,7 @@
 
 class DB{
 
-	var $servername = "localhost";
+	var $servername = "realhackfi:asia-south1:realhackfinal";
 	var $username = "root";
 	var $password = "";
 	var $db='ellipsischat';
