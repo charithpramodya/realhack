@@ -8,4 +8,5 @@ handlers:
 - url: /.*
   script: index.php
   
+ cloudsql_connection_name: realhackfi:asia-south1:realhackfinal
  cloudsql_port: 3306
