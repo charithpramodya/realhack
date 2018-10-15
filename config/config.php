@@ -10,7 +10,7 @@ class DB{
 	var $conn;
 	
 	function __construct(){
-		$this->conn = new mysqli(null, "root", "", $db, null, "/cloudsql/realhackfi");
+		$this->conn = new mysqli(null, "root", "", $db, null, ":/cloudsql/realhackfi");
 		if ($this->conn->connect_error) {
 	    		die("Connection failed: " . $this->conn->connect_error);
 		} 	
