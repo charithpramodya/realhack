@@ -17,6 +17,17 @@ class Company{
 
 	}
 
+	function updateCompany($company_id, $company_name,$company_email,$company_color,$company_description){
+		$sql = "UPDATE companies SET  company_name='$company_name', company_email='$company_email', company_color='$company_color', company_description='$company_description' WHERE company_id = '$company_id'";
+		$this->conn->query($sql);
+
+	}
+
+	function deleteCompany($company_id){
+		$sql = "DELETE FROM companies WHERE company_id=$company_id";
+		$this->conn->query($sql);
+	}
+
 
 
 

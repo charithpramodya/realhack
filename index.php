@@ -1,10 +1,10 @@
 <?php
+	// addmin - t@t.com hello1234
+	include_once 'obj/company.php';
 
-	include_once 'obj/admin.php';
-
-	$admin=new Admin();
+	$admin=new Company();
 	
 
-	$admin->addAdmin("t@t.com", "hello123");
+	$admin->deleteCompany(1);
 
    ?>
